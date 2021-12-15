@@ -9,4 +9,5 @@ public interface ArchiveRepository {
     List<Archive> getAll();
     Optional<Archive> getRegister(int id);
     Archive saveRegister(Archive archive);
+    void delete(int ArchiveId);
 }

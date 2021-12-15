@@ -40,6 +40,8 @@ public class ArchivoController {
         return archiveService.saveRegister(archive);
     }
 
-
-
+    @DeleteMapping("/delete/{id}")
+    public boolean delete(@PathVariable("id") int archiveId) {
+        return archiveService.delete(archiveId);
+    }
 }

@@ -15,8 +15,17 @@ public class ArchiveService {
     private ArchiveRepository archiveRepository;
 
     public List<Archive> getAll(){return archiveRepository.getAll(); }
+
     public Optional<Archive> getRegister(int id){
         return archiveRepository.getRegister(id); }
+
     public Archive saveRegister(Archive archive){
         return archiveRepository.saveRegister(archive); }
+
+    public boolean delete(int archiveId) {
+        return getRegister(archiveId).map(archive -> {
+            archiveRepository.delete(archiveId);
+            return true;
+        }).orElse(false);
+    }
 }

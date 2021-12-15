@@ -36,4 +36,8 @@ public class ArchivoRepository implements ArchiveRepository {
         Archivo archivo = archiveMapper.toArchivo(archive);
         return archiveMapper.toArchive(archivoCRUDRepository.save(archivo));
     }
+    @Override
+    public void delete(int archiveId) {
+        archivoCRUDRepository.deleteById(archiveId);
+    }
 }
