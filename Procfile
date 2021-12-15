@@ -1,1 +1,1 @@
-web: java -jar -Dspring.profiles.active=pdn build/libs/0.0.1-SNAPSHOT
+web: java -jar -Dspring.profiles.active=pdn build/libs/ThomasGregCrud-1.0.jar
