@@ -22,8 +22,8 @@ public class ArchivoRepository implements ArchiveRepository {
 
     @Override
     public List<Archive> getAll() {
-        List<Archivo> ListEstructuraCargueMovimiento = (List<Archivo>) archivoCRUDRepository.findAll();
-        return archiveMapper.toListArchive(ListEstructuraCargueMovimiento);
+        List<Archivo> archive = (List<Archivo>) archivoCRUDRepository.findAll();
+        return archiveMapper.toListArchive(archive);
     }
 
     @Override
